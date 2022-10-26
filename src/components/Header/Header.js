@@ -68,9 +68,11 @@ const Header = () => {
                 
                 </label>
                 <div className="dropdown dropdown-end">
-                        <div className="w-10 rounded-full mx-2 hover:tooltip hover:tooltip-open hover:tooltip-left" data-tip={user?.displayName || 'User Name'}>
+                        <Link to='/profile'>
+                        <div className="w-10 rounded-full mx-2 hover:tooltip hover:tooltip-open hover:tooltip-bottom" data-tip={user?.displayName || 'User Name'}>
                             <img className="w-10 rounded-full" src={user?.photoURL ? user.photoURL : "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg"} alt='dp' />
                         </div>
+                        </Link>
                         </div>
                         {
                         user?.uid ? <Link><button onClick={handleLogOut} className='btn btn-sm'>LogOut</button></Link> : <Link className='btn btn-sm' to='/login'>Login</Link>

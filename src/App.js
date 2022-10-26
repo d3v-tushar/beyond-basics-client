@@ -9,6 +9,8 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import CourseDetails from './components/CourseDetails/CourseDetails';
 import Home from './components/Home/Home';
+import Profile from './components/Profile/Profile';
+import PrivateRoute from './route/PrivateRoute';
 
 function App() {
   const router = createBrowserRouter([
@@ -51,6 +53,10 @@ function App() {
         {
           path: '/register',
           element: <Register></Register>
+        },
+        {
+          path: '/profile',
+          element: <PrivateRoute><Profile></Profile></PrivateRoute>
         }
       ]
     },

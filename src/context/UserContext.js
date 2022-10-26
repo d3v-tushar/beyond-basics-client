@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { createContext } from 'react';
-import {createUserWithEmailAndPassword, getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, sendEmailVerification, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile} from 'firebase/auth'
+import {createUserWithEmailAndPassword, getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, sendEmailVerification, signInWithEmailAndPassword, signInWithPopup, signOut, updatePassword, updateProfile} from 'firebase/auth'
 import app from '../firebase/firebase.config';
 import { useEffect } from 'react';
 
@@ -19,8 +19,8 @@ const UserContext = ({children}) => {
     };
 
     //Update User Profile
-    const updateUserProfileData = (name) =>{
-        return updateProfile(auth.currentUser, {displayName: name});
+    const updateUserProfileData = (name, photo) =>{
+        return updateProfile(auth.currentUser, {displayName: name, photoURL: photo});
     };
 
     //Login Registred User with Email & Password
@@ -56,7 +56,13 @@ const UserContext = ({children}) => {
         return signOut(auth);
     };
 
-    const authInfo = {user, newUserRegister, emailVerification, signInExistingUser, updateUserProfileData, signInWithGoogle, signInWithGitHub, logOut };
+    //Update Password
+    const currentUser = auth.currentUser;
+    const updateNewPassword = (password) =>{
+        return updatePassword(currentUser, password)
+    };
+
+    const authInfo = {user, updateNewPassword, newUserRegister, emailVerification, signInExistingUser, updateUserProfileData, signInWithGoogle, signInWithGitHub, logOut };
     
     return (
         <div>

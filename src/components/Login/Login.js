@@ -1,6 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../../context/UserContext';
 
 const Login = () => {
@@ -18,7 +18,7 @@ const Login = () => {
         .then(result =>{
             const user = result.user;
             console.log(user);
-            navigate('/');
+            navigate(from, { replace: true });
         })
         .catch(error => console.error(error.message))
     };
@@ -29,7 +29,7 @@ const Login = () => {
         .then(result =>{
             const user = result.user;
             console.log(user);
-            navigate('/');
+            navigate(from, { replace: true });
         })
         .catch(error => console.error(error.message))
     };
@@ -40,9 +40,11 @@ const Login = () => {
         .then(result =>{
             const user = result.user;
             console.log(user);
-            navigate('/');
+            navigate(from, { replace: true });
         })
     }
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
     return (
         <div className="hero min-h-screen bg-base-100">
                 <div className="hero-content flex-col">
