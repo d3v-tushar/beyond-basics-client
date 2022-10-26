@@ -22,7 +22,10 @@ const Header = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                     <li>
-                        <NavLink to='/courses'>Courses</NavLink>.
+                        <NavLink to='/'>Home</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='/courses'>Courses</NavLink>
                     </li>
                     <li>
                         <NavLink to='/faq'>FAQ</NavLink>
@@ -32,10 +35,13 @@ const Header = () => {
                     </li>
                     </ul>
                     </div>
-                    <Link className="btn btn-ghost normal-case text-xl">Bayond Basics</Link>
+                    <Link to='/' className="btn btn-ghost normal-case text-xl">Bayond Basics</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">
+                    <li className='mx-2'>
+                        <NavLink to='/home'>Home</NavLink>
+                    </li>
                     <li className='mx-2'>
                         <NavLink to='/courses'>Courses</NavLink>
                     </li>
@@ -62,29 +68,13 @@ const Header = () => {
                 
                 </label>
                 <div className="dropdown dropdown-end">
-                        {/* <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 rounded-full hover:tooltip hover:tooltip-open hover:tooltip-left" data-tip="hello">
-                            <img className="w-10 rounded-full" src={user.photoURL ? user.photoURL : "https://placeimg.com/80/80/people"} alt='dp' />
-                        </div>
-                        </label> */}
-
                         <div className="w-10 rounded-full mx-2 hover:tooltip hover:tooltip-open hover:tooltip-left" data-tip={user?.displayName || 'User Name'}>
                             <img className="w-10 rounded-full" src={user?.photoURL ? user.photoURL : "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg"} alt='dp' />
                         </div>
-                        {/* <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                            <li>
-                            <Link to='/'><button>Profile</button></Link>
-                            </li>
-                            <li><Link to='/login'><button>LogOut</button></Link></li>
-                        </ul> */}
                         </div>
-                        {/* <div className="hover:tooltip hover:tooltip-open hover:tooltip-bottom" data-tip="hello">
-                            <button className="btn">Left</button>
-                        </div> */}
-                    {
-                    user?.uid ? <Link><button onClick={handleLogOut} className='btn btn-sm'>LogOut</button></Link> : <Link className='btn btn-sm' to='/login'>Login</Link>
-                    }
-
+                        {
+                        user?.uid ? <Link><button onClick={handleLogOut} className='btn btn-sm'>LogOut</button></Link> : <Link className='btn btn-sm' to='/login'>Login</Link>
+                        }
                 </div>
             </div>
         </>

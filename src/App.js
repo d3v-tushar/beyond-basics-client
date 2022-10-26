@@ -1,4 +1,3 @@
-//import logo from './logo.svg';
 import './App.css';
 import Main from './layouts/Main/Main';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -8,6 +7,8 @@ import Blog from './components/Blog/Blog';
 import NotFound from './components/NotFound/NotFound';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
+import CourseDetails from './components/CourseDetails/CourseDetails';
+import Home from './components/Home/Home';
 
 function App() {
   const router = createBrowserRouter([
@@ -16,9 +17,24 @@ function App() {
       element: <Main></Main>,
       children: [
         {
+          path: '/',
+          element: <Home></Home>
+        },
+        {
+          path: '/home',
+          element: <Home></Home>
+        },
+        {
           path: '/courses',
           element: <Courses></Courses>,
           loader: () => fetch('courses.json')
+        },
+        {
+          path: '/course/:courseId',
+          loader: async({params}) => {
+            return fetch(`courses.json`)
+          },
+          element: <CourseDetails></CourseDetails>
         },
         {
           path: '/faq',

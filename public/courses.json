@@ -1,7 +1,7 @@
 [
     {
     "id": 101,
-    "course": "Software Development",
+    "title": "Software Development",
     "duration": 160,
     "contents": ["Object-Oriended Programming(OOP)", "Database Management System", "Front-end Development", "Web Application", "Architecture", "Django", "Software Testing"],
     "fee": 300,
@@ -11,17 +11,17 @@
     },
     {
     "id": 102,
-    "course": "Android Apps Development",
+    "title": "Android Apps Development",
     "duration": 60,
     "contents": ["Introduction to android", "User Interface & Navigation", "JQuery", "Activity", "Storage", "Google Play Services", "Object-Oriended Programming(OOP)", "Test Application"],
     "fee": 250,
     "image": "androiddev.png",
-    "discription": "This Android App Development Master Course with Java | Android course will take you from beginner to advance level. Our passion is to carry our experience with the right examples to anyone who will enroll in this course. In this course, you will learn Android app development step-by-step. While doing kind of show and tell in our lectures we are also explaining whys. During the lectures, we will be practicing with more than 10 examples and we will be learning to build and publish 14 major apps.",
+    "discription": "This Android App Development Master title with Java | Android title will take you from beginner to advance level. Our passion is to carry our experience with the right examples to anyone who will enroll in this title. In this title, you will learn Android app development step-by-step. While doing kind of show and tell in our lectures we are also explaining whys. During the lectures, we will be practicing with more than 10 examples and we will be learning to build and publish 14 major apps.",
     "rating": 4.0
     },
     {
         "id": 103,
-        "course": "Web Development",
+        "title": "Web Development",
         "duration": 120,
         "contents": ["HTML5", "CSS3", "BootStrap", "TailWind", "JavaScript ES6", "DOM Manupulation", "Aplication Programming Interface", "React JS", "Google Firebase", "Node JS", "Express JS", "MongoDB"],
         "fee": 150,
@@ -31,7 +31,7 @@
     },
     {
         "id": 101,
-        "course": "Software Development",
+        "title": "Software Development",
         "duration": 160,
         "contents": ["Object-Oriended Programming(OOP)", "Database Management System", "Front-end Development", "Web Application", "Architecture", "Django", "Software Testing"],
         "fee": 300,
@@ -41,17 +41,17 @@
         },
         {
         "id": 102,
-        "course": "Android Apps Development",
+        "title": "Android Apps Development",
         "duration": 60,
         "contents": ["Introduction to android", "User Interface & Navigation", "JQuery", "Activity", "Storage", "Google Play Services", "Object-Oriended Programming(OOP)", "Test Application"],
         "fee": 250,
         "image": "androiddev.png",
-        "discription": "This Android App Development Master Course with Java | Android course will take you from beginner to advance level. Our passion is to carry our experience with the right examples to anyone who will enroll in this course. In this course, you will learn Android app development step-by-step. While doing kind of show and tell in our lectures we are also explaining whys. During the lectures, we will be practicing with more than 10 examples and we will be learning to build and publish 14 major apps.",
+        "discription": "This Android App Development Master title with Java | Android title will take you from beginner to advance level. Our passion is to carry our experience with the right examples to anyone who will enroll in this title. In this title, you will learn Android app development step-by-step. While doing kind of show and tell in our lectures we are also explaining whys. During the lectures, we will be practicing with more than 10 examples and we will be learning to build and publish 14 major apps.",
         "rating": 4.0
         },
         {
             "id": 103,
-            "course": "Web Development",
+            "title": "Web Development",
             "duration": 120,
             "contents": ["HTML5", "CSS3", "BootStrap", "TailWind", "JavaScript ES6", "DOM Manupulation", "Aplication Programming Interface", "React JS", "Google Firebase", "Node JS", "Express JS", "MongoDB"],
             "fee": 150,

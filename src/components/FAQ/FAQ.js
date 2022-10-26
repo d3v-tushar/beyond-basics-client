@@ -2,7 +2,7 @@ import React from 'react';
 
 const FAQ = () => {
     return (
-        <div>
+        <div className='min-h-screen'>
             <h2>This is FAQ</h2>
         </div>
     );
