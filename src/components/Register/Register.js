@@ -1,11 +1,12 @@
 import React from 'react';
 import { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/UserContext';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
-    const {newUserRegister, updateUserProfileData} = useContext(AuthContext);
-    const navigate = useNavigate();
+    const {newUserRegister, emailVerification, updateUserProfileData} = useContext(AuthContext);
 
     const handleRegister = (e) =>{
         e.preventDefault();
@@ -20,7 +21,7 @@ const Register = () => {
             console.log(user);
             updateProfile(name);
             form.reset();
-            navigate('/');
+            handleEmailVerification();
         })
         .catch(error =>{
             console.error(error.message);
@@ -29,8 +30,25 @@ const Register = () => {
 
     const updateProfile = (name) =>{
         updateUserProfileData(name)
-        .then(() => alert('Registration Complete'))
+        .then(() => console.log("Registration Done!"))
         .catch(error => console.error(error.message))
+    }
+
+    //Email Verification
+    const handleEmailVerification = () =>{
+        emailVerification()
+        .then(() =>{
+            toast.success('Verification Email Sent!', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                });
+        })
     }
     return (
         <div className="hero min-h-screen bg-base-200">
@@ -67,6 +85,7 @@ const Register = () => {
                     </form>
                     </div>
                 </div>
+                <ToastContainer/>
             </div>
     );
 };

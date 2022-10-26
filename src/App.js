@@ -17,7 +17,8 @@ function App() {
       children: [
         {
           path: '/courses',
-          element: <Courses></Courses>
+          element: <Courses></Courses>,
+          loader: () => fetch('courses.json')
         },
         {
           path: '/faq',

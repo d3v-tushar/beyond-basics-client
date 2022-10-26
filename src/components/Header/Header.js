@@ -49,7 +49,7 @@ const Header = () => {
                 </div>
                 {/* Exp */}
                 <div className="navbar-end">
-                <label className="swap swap-rotate">
+                <label className="swap swap-rotate lg:grid hidden">
   
                 {/* <!-- this hidden checkbox controls the state --> */}
                 <input type="checkbox" />
@@ -68,8 +68,8 @@ const Header = () => {
                         </div>
                         </label> */}
 
-                        <div className="w-10 rounded-full hover:tooltip hover:tooltip-open hover:tooltip-left" data-tip={user?.displayName || 'User Name'}>
-                            <img className="w-10 rounded-full" src={user?.photoURL ? user.photoURL : "https://placeimg.com/80/80/people"} alt='dp' />
+                        <div className="w-10 rounded-full mx-2 hover:tooltip hover:tooltip-open hover:tooltip-left" data-tip={user?.displayName || 'User Name'}>
+                            <img className="w-10 rounded-full" src={user?.photoURL ? user.photoURL : "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg"} alt='dp' />
                         </div>
                         {/* <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             <li>
@@ -82,7 +82,7 @@ const Header = () => {
                             <button className="btn">Left</button>
                         </div> */}
                     {
-                        user.uid ? <button className='btn btn-sm' onClick={handleLogOut}>Logout</button> : <Link className='btn btn-sm' to='/login'>Login</Link>
+                    user?.uid ? <Link><button onClick={handleLogOut} className='btn btn-sm'>LogOut</button></Link> : <Link className='btn btn-sm' to='/login'>Login</Link>
                     }
 
                 </div>

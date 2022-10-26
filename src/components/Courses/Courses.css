@@ -1,0 +1,10 @@
+.course-container{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1.5rem;
+}

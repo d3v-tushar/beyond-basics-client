@@ -1,0 +1,56 @@
+[
+    {
+    "id": 101,
+    "course": "Software Development",
+    "duration": 160,
+    "contents": ["Object-Oriended Programming(OOP)", "Database Management System", "Front-end Development", "Web Application", "Architecture", "Django", "Software Testing"],
+    "fee": 300,
+    "image": "image.link",
+    "discription": "Software Development programme from Bayond Basics is a highly regarded across the industry. Instructors at Bayond Basics consistently engages with multiple corporate partners to design an industry ready curriculum, and as you advance through the programme, you’ll develop job-ready skills through working on multiple industry projects."
+    },
+    {
+    "id": 102,
+    "course": "Android Apps Development",
+    "duration": 60,
+    "contents": ["Introduction to android", "User Interface & Navigation", "JQuery", "Activity", "Storage", "Google Play Services", "Object-Oriended Programming(OOP)", "Test Application"],
+    "fee": 250,
+    "image": "androiddev.png",
+    "discription": "This Android App Development Master Course with Java | Android course will take you from beginner to advance level. Our passion is to carry our experience with the right examples to anyone who will enroll in this course. In this course, you will learn Android app development step-by-step. While doing kind of show and tell in our lectures we are also explaining whys. During the lectures, we will be practicing with more than 10 examples and we will be learning to build and publish 14 major apps."
+    },
+    {
+        "id": 101,
+        "course": "Software Development",
+        "duration": 160,
+        "contents": ["Object-Oriended Programming(OOP)", "Database Management System", "Front-end Development", "Web Application", "Architecture", "Django", "Software Testing"],
+        "fee": 300,
+        "image": "image.link",
+        "discription": "Software Development programme from Bayond Basics is a highly regarded across the industry. Instructors at Bayond Basics consistently engages with multiple corporate partners to design an industry ready curriculum, and as you advance through the programme, you’ll develop job-ready skills through working on multiple industry projects."
+        },
+        {
+        "id": 102,
+        "course": "Android Apps Development",
+        "duration": 60,
+        "contents": ["Introduction to android", "User Interface & Navigation", "JQuery", "Activity", "Storage", "Google Play Services", "Object-Oriended Programming(OOP)", "Test Application"],
+        "fee": 250,
+        "image": "androiddev.png",
+        "discription": "This Android App Development Master Course with Java | Android course will take you from beginner to advance level. Our passion is to carry our experience with the right examples to anyone who will enroll in this course. In this course, you will learn Android app development step-by-step. While doing kind of show and tell in our lectures we are also explaining whys. During the lectures, we will be practicing with more than 10 examples and we will be learning to build and publish 14 major apps."
+        },
+        {
+            "id": 101,
+            "course": "Software Development",
+            "duration": 160,
+            "contents": ["Object-Oriended Programming(OOP)", "Database Management System", "Front-end Development", "Web Application", "Architecture", "Django", "Software Testing"],
+            "fee": 300,
+            "image": "image.link",
+            "discription": "Software Development programme from Bayond Basics is a highly regarded across the industry. Instructors at Bayond Basics consistently engages with multiple corporate partners to design an industry ready curriculum, and as you advance through the programme, you’ll develop job-ready skills through working on multiple industry projects."
+            },
+            {
+            "id": 102,
+            "course": "Android Apps Development",
+            "duration": 60,
+            "contents": ["Introduction to android", "User Interface & Navigation", "JQuery", "Activity", "Storage", "Google Play Services", "Object-Oriended Programming(OOP)", "Test Application"],
+            "fee": 250,
+            "image": "androiddev.png",
+            "discription": "This Android App Development Master Course with Java | Android course will take you from beginner to advance level. Our passion is to carry our experience with the right examples to anyone who will enroll in this course. In this course, you will learn Android app development step-by-step. While doing kind of show and tell in our lectures we are also explaining whys. During the lectures, we will be practicing with more than 10 examples and we will be learning to build and publish 14 major apps."
+            }
+]
