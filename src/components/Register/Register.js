@@ -63,25 +63,25 @@ const Register = () => {
                         <label className="label">
                             <span className="label-text">Name</span>
                         </label>
-                        <input type="text" placeholder="name" name='name' className="input input-bordered" />
+                        <input type="text" placeholder="name" name='name' required className="input input-bordered" />
                         </div>
                         <div className="form-control">
                         <label className="label">
                             <span className="label-text">Photo URL</span>
                         </label>
-                        <input type="text" placeholder="Put url Here" name='photo' className="input input-bordered" />
+                        <input type="text" placeholder="Put url Here" name='photo' required className="input input-bordered" />
                         </div>
                         <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
-                        <input type="email" placeholder="email" name='email' className="input input-bordered" />
+                        <input type="email" placeholder="email" name='email' required className="input input-bordered" />
                         </div>
                         <div className="form-control">
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
-                        <input type="password" placeholder="password" name='password' className="input input-bordered" />
+                        <input type="password" placeholder="password" name='password' required className="input input-bordered" />
                         <label className="label">
                             <Link to='/login' className="label-text-alt link link-hover">Already have a account?</Link>
                         </label>
