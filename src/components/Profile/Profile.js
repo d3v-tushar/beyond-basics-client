@@ -45,7 +45,7 @@ const Profile = () => {
         <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col">
                     <div className="text-center lg:text-left">
-                    <h1 className="text-4xl font-bold">Update Profile</h1>
+                    <h1 className="text-4xl font-bold">Update Your Profile</h1>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="avatar mx-auto mt-6">

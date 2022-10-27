@@ -35,20 +35,20 @@ const Header = () => {
                     </li>
                     </ul>
                     </div>
-                    <Link to='/' className="btn btn-ghost normal-case text-xl">Bayond Basics</Link>
+                    <Link to='/' className="btn btn-ghost normal-case font-bold text-2xl">Bayond Basics</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">
-                    <li className='mx-2'>
+                    <li className='mx-2 font-semibold text-lg'>
                         <NavLink to='/home'>Home</NavLink>
                     </li>
-                    <li className='mx-2'>
+                    <li className='mx-2 font-semibold text-lg'>
                         <NavLink to='/courses'>Courses</NavLink>
                     </li>
-                    <li className='mx-2'>
+                    <li className='mx-2 font-semibold text-lg'>
                         <NavLink to='/faq'>FAQ</NavLink>
                     </li>
-                    <li className='mx-2'>
+                    <li className='mx-2 font-semibold text-lg'>
                         <NavLink to='/blog'>Blog</NavLink>
                     </li>
                     </ul>

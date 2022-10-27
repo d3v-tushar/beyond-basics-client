@@ -11,6 +11,7 @@ import CourseDetails from './components/CourseDetails/CourseDetails';
 import Home from './components/Home/Home';
 import Profile from './components/Profile/Profile';
 import PrivateRoute from './route/PrivateRoute';
+import Checkout from './components/Checkout/Checkout';
 
 function App() {
   const router = createBrowserRouter([
@@ -57,6 +58,10 @@ function App() {
         {
           path: '/profile',
           element: <PrivateRoute><Profile></Profile></PrivateRoute>
+        },
+        {
+          path: '/checkout',
+          element: <PrivateRoute><Checkout></Checkout></PrivateRoute>
         }
       ]
     },
