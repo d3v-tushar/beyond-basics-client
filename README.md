@@ -1,7 +1,7 @@
 # Welcome to Beyond Basics
 This Projects is developed by Tushar
 
-#Technology Used on this projects
+# Technology Used on this projects
 1. React (CRA)
 2. TailWind (DaisyUI)
 3. Firebase Authenticaruin System

@@ -60,8 +60,11 @@ function App() {
           element: <PrivateRoute><Profile></Profile></PrivateRoute>
         },
         {
-          path: '/checkout',
-          element: <PrivateRoute><Checkout></Checkout></PrivateRoute>
+          path: '/checkout/:courseId',
+          element: <PrivateRoute><Checkout></Checkout></PrivateRoute>,
+          loader: async({params}) => {
+            return fetch(`https://beyond-basics-server.vercel.app/courses/${params.courseId}`)
+          }
         }
       ]
     },

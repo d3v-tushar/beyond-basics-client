@@ -1,12 +1,15 @@
 import React from 'react';
-import { useContext } from 'react';
-import { CourseData } from '../CourseDetails/CourseDetails';
+import { useLoaderData } from 'react-router-dom';
 
 const Checkout = () => {
-    const {course} = useContext(CourseData);
+    const course = useLoaderData();
+    //console.log(course);
     return (
         <div>
-            <h2>{course?.displayName}</h2>
+            <h2>Default Title</h2>
+            {
+                course.id && <h2>{course.title}</h2>
+            }
         </div>
     );
 };
