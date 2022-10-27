@@ -39,7 +39,7 @@ const Course = ({course}) => {
                 <p>Duration: {course.duration} hr</p>
                 <p>Fees: ${course.fees}</p>
                 <br />
-            <Link><button className="btn btn-primary">Learn More</button></Link>
+            <Link to={`/course/${course.id}`}><button className="btn btn-primary">Learn More</button></Link>
             </div>
         </div>
         </div>

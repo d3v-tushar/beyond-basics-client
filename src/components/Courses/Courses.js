@@ -10,7 +10,7 @@ import './Courses.css';
 const Courses = () => {
     const [courseData, setCourseData] = useState([]);
     useEffect(() =>{
-        fetch('https://beyond-basics-server-d3v-tushar.vercel.app/courses')
+        fetch('https://beyond-basics-api-server.vercel.app/courses/')
         .then(response => response.json())
         .then(data => setCourseData(data))
     },[]);
