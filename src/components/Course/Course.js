@@ -39,6 +39,9 @@ const Course = ({course}) => {
                 <p>Duration: {course.duration} hr</p>
                 <p>Fees: ${course.fees}</p>
                 <br />
+                <div className="rating">
+                <p><input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" /></p><p className='mx-1 mt-1'>{course.rating.rate}</p>
+                </div>
             <Link to={`/course/${course.id}`}><button className="btn btn-primary">Learn More</button></Link>
             </div>
         </div>
