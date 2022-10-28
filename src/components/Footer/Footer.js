@@ -17,7 +17,7 @@ const Footer = () => {
                 </div>
             </div> 
             <div>
-                <p>Copyright © 2022 - All right reserved by ACME Industries Ltd</p>
+                <p>Copyright © 2022 - All right reserved by <a href="https://github.com/d3v-tushar">#Tushar</a></p>
             </div>
         </footer>
     );

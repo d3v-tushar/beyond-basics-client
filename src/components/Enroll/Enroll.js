@@ -13,7 +13,7 @@ const Enroll = () => {
                 <div className=" flex-col lg:flex-row-reverse">
                     <div className="carousel w-full mb-5">
                     <div id="slide1" className="carousel-item relative w-full">
-                    <img src="https://placeimg.com/800/200/arch" className="w-full" alt='slider' />
+                    <img src={course.imgWide} className="w-full" alt='slider' />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     </div>
                     </div>
@@ -30,7 +30,7 @@ const Enroll = () => {
                             <div className=''>
                                 <h4 className='text-xl font-semibold'>Course Contents:</h4>
                             {
-                                course.content.map(con => <li>{con}</li>)
+                                course.content.map((con, index) => <li key={index}>{con}</li>)
                             }
                             </div>
                             </div>
