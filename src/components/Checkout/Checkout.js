@@ -8,7 +8,7 @@ const Checkout = () => {
     const {user} = useContext(AuthContext);
     //console.log(course);
     return (
-        <div className="hero sm:m-12 lg:min-h-screen bg-base-200">
+        <div className="grid justify-center items-center lg:min-h-screen bg-base-200">
             <div className="max-w-md">
             <h1 className="mb-5 text-5xl font-bold">Checkout</h1>
             <p className="mb-5"></p>
