@@ -2,54 +2,34 @@ import React from 'react';
 
 const FAQ = () => {
     return (
-        <div className="hero min-h-screen" style={{ backgroundImage: `url("https://placeimg.com/1000/800/arch")` }}>
-        <div className="hero-overlay bg-opacity-60"></div>
-        <div className="hero-content text-center text-neutral-content">
-            <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">FRIQUIBTLY ASK QUESTIONS</h1>
-            <div tabIndex={0} className="collapse-title bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content my-3">
-                {/* Q-1 */}
-            <div className="collapse-title text-xl font-medium">
-                Focus me to see content
-            </div>
-            <div className="collapse-content"> 
-                <p>tabIndex={0} attribute is necessary to make the div focusable</p>
-            </div>
-            </div>
-
-            {/* Q-2 */}
-            <div tabIndex={0} className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box my-3">
-            <div className="collapse-title text-xl font-medium">
-                Focus me to see content
-            </div>
-            <div className="collapse-content"> 
-                <p>tabIndex={0} attribute is necessary to make the div focusable</p>
-            </div>
-            </div>
-
-            {/* Q-3 */}
-            <div tabIndex={0} className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box my-3">
-            <div className="collapse-title text-xl font-medium">
-                Focus me to see content
-            </div>
-            <div className="collapse-content"> 
-                <p>tabIndex={0} attribute is necessary to make the div focusable</p>
-            </div>
-            </div>
-
-            {/* Q-4 */}
-            <div tabIndex={0} className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box my-3">
-            <div className="collapse-title text-xl font-medium">
-                Focus me to see content
-            </div>
-            <div className="collapse-content"> 
-                <p>tabIndex={0} attribute is necessary to make the div focusable</p>
-            </div>
-            </div>
-            
+        <section className="bg-gray-800 text-gray-100">
+        <div className="container flex flex-col justify-center p-4 mx-auto md:p-8">
+            <h2 className="mb-12 text-4xl font-bold leading-none text-center sm:text-5xl">Frequently Asked Questions</h2>
+            <div className="grid gap-10 md:gap-8 sm:p-3 md:grid-cols-2 lg:px-12 xl:px-32">
+                <div>
+                    <h3 className="font-semibold">What do Beyond Basics courses include?</h3>
+                    <p className="mt-1 text-gray-400">Each Beyond Basics course is created, owned and managed by the instructor(s). The foundation of each Beyond Basics course are its lectures, which can include videos, slides, and text. In addition, instructors can add resources and various types of practice activities, as a way to enhance the learning experience of students. </p>
+                </div>
+                <div>
+                    <h3 className="font-semibold">What if I don’t like a course I purchased?</h3>
+                    <p className="mt-1 text-gray-400">We want you to be satisfied, so all eligible courses purchased on Beyond Basics can be refunded within 30 days. If you are unhappy with a course, you can request a refund, provided the request meets the guidelines in our refund policy. </p>
+                </div>
+                <div>
+                    <h3 className="font-semibold">Where can I go for help?</h3>
+                    <p className="mt-1 text-gray-400">If you find you have a question about a paid course while you’re taking it, you can search for answers to your question in the Q&A or ask the instructor. <br />
+                    Our Help Center has extensive information regarding Beyond Basics’s various features, and articles with troubleshooting steps to help you quickly resolve any issues you encounter. Our support team is also happy to help. 
+                    </p>
+                </div>
+                <div>
+                    <h3 className="font-semibold">Is Beyond Basics an accredited institution? Do I receive anything after I complete a course?</h3>
+                    <p className="mt-1 text-gray-400">While Beyond Basics is not an accredited institution, we offer skills-based courses taught by real-world experts in their field. Every approved, paid course features a certificate of completion to document your accomplishment.
+                    <br />
+                    We encourage you to visit the websites for these third parties and read their terms of use, privacy policies. This list is not exhaustive and will be updated from time to time.
+                    </p>
+                </div>
             </div>
         </div>
-        </div>
+    </section>
     );
 };
 

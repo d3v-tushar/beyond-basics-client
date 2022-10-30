@@ -10,7 +10,7 @@ const Course = ({course}) => {
         <p className='my-4'>{course.summary}</p>
             <div className="card-actions grid grid-cols-2 justify-end">
                 <div>
-                    <p><span className='text-yellow-400'><i class="fa-solid fa-star"></i></span> {course.rating.rate} <small>({course.rating.count})</small> | ${course.fees} | {course.duration} <small>hr</small></p>
+                    <p><span className='text-yellow-400'><i className="fa-solid fa-star"></i></span> {course.rating.rate} <small>({course.rating.count})</small> | ${course.fees} | {course.duration} <small>hr</small></p>
                 </div>
             <div className='grid justify-end'><Link to={`/course/${course.id}`}><button className="btn btn-primary">Learn More</button></Link></div>
             </div>

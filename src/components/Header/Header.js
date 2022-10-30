@@ -22,9 +22,6 @@ const Header = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                     <li>
-                        <NavLink to='/'>Home</NavLink>
-                    </li>
-                    <li>
                         <NavLink to='/home'>Home</NavLink>
                     </li>
                     <li>
@@ -73,12 +70,14 @@ const Header = () => {
                 <div className="dropdown dropdown-end">
                         <Link to='/profile'>
                         <div className="w-10 rounded-full mx-2 hover:tooltip hover:tooltip-open hover:tooltip-bottom" data-tip={user?.displayName || 'User Name'}>
-                            <img className="w-10 rounded-full" src={user?.photoURL ? user.photoURL : "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg"} alt='dp' />
+                            <img className="h-10 rounded-full" src={user?.photoURL ? user.photoURL : "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg"} alt='dp' />
                         </div>
                         </Link>
                         </div>
                         {
-                        user?.uid ? <Link><button onClick={handleLogOut} className='btn btn-sm'>LogOut</button></Link> : <Link className='btn btn-sm' to='/login'>Login</Link>
+                        user?.uid ? <Link><button onClick={handleLogOut} className='btn btn-sm'>LogOut</button></Link> : <div className="btn-group">
+                            <Link className='btn btn-sm btn-active' to='/login'>Login</Link> <Link className='btn btn-sm' to='/register'>Register</Link>
+                        </div>
                         }
                 </div>
             </div>

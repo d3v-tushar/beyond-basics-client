@@ -3,7 +3,7 @@ import React from 'react';
 const Blog = () => {
     return (
         <div className='min-h-screen grid justify-items-center mt-5'>
-            <div className="card md:w-10/12 bg-base-300 text-black my-5">
+            <div className="card md:w-10/12 bg-gray-900 text-gray-100 my-5">
             <div className="card-body items-center">
                 <h2 className="card-title text-2xl">1. What is CORS?</h2>
                 <p className='text-justified'><span className='font-semibold'> Answer(1)</span>: Cross-Origin Resource Sharing (CORS)
@@ -16,7 +16,7 @@ const Blog = () => {
             </div>
 
 
-            <div className="card md:w-10/12 bg-base-300 text-black my-5">
+            <div className="card md:w-10/12 bg-gray-900 text-gray-100 my-5">
             <div className="card-body items-center">
                 <h2 className="card-title text-2xl">2. Why are you using firebase? What other options do you have to implement authentication?</h2>
                 <p><span className='font-semibold'> Answer(2.1)</span>: Firebase give users a quick, intuitive sign-in process with
@@ -30,7 +30,7 @@ const Blog = () => {
             </div>
 
 
-            <div className="card md:w-10/12 bg-base-300 text-black my-5">
+            <div className="card md:w-10/12 bg-gray-900 text-gray-100 my-5">
             <div className="card-body items-center">
                 <h2 className="card-title text-2xl">3. How does the private route work?</h2>
                 <p><span className='font-semibold'> Answer(3)</span>: The private route component is similar to the public route, the only change is that redirect URL and authenticate condition. If the user is not authenticated he will be redirected to the login page and the user can only access the authenticated routes If he is authenticated (Logged in). <br />
@@ -41,7 +41,7 @@ const Blog = () => {
                 </div>
             </div>
 
-            <div className="card md:w-10/12 bg-base-300 text-black my-5">
+            <div className="card md:w-10/12 bg-gray-900 text-gray-100 my-5">
             <div className="card-body items-center">
                 <h2 className="card-title text-2xl">4. What is Node? How does Node work?</h2>
                 <p><span className='font-semibold'> Answer(4.1)</span>: Node.js is a server-side platform built on Google Chrome's JavaScript Engine (V8 Engine). Node.js was developed by Ryan Dahl in 2009 and its latest version is v0.10.36. The definition of Node.js as supplied by its official documentation is as follows − <br />

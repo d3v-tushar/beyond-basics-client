@@ -14,8 +14,8 @@ const Checkout = () => {
             <p className="mb-5"></p>
             <div className="card w-96 bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 shadow-xl text-neutral-content">
                 <div className="card-body items-center text-center">
-                    <h2 className="card-title">{course.title}</h2>
-                    <p>Cousre Fee: ${course.fees} || Duration: {course.duration}hr</p>
+                    <h2 className="card-title text-black">{course.title}</h2>
+                    <p className='text-gray-900'>Cousre Fee: ${course.fees} || Duration: {course.duration}hr</p>
                     <div className="card-actions justify-end">
                     <label htmlFor="my-modal" className="btn modal-button">Confirm</label>
                     <Link to={`/course/${course.id}`}><button className="btn btn-outline">Cancel</button></Link>
