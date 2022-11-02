@@ -11,7 +11,7 @@ const Home = () => {
                 <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
                     <h1 className="text-5xl font-bold leading-none sm:text-6xl">Beyond
                         <span className="dark:text-violet-400"> Basics</span><br />
-                        <span className='text-3xl'>Learn without limits</span>
+                        <span className='text-3xl'>Learn Without Limits</span>
                     </h1>
                     <p className="mt-6 mb-8 text-lg sm:mb-12">
                         <br/> Start, Switch, or Advance your career with Advance Courses, Professional Certificates, and degrees from world-class universities and companies.
@@ -19,8 +19,8 @@ const Home = () => {
 
                     </p>
                     <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                        <Link to='/courses'><button className='btn'>Courses</button></Link>
-                        <Link to='/register'><button className='btn btn-info'>Register</button></Link>
+                        <Link to='/courses'><button className='btn btn-primary'><p>Courses <i className="fa-solid fa-graduation-cap"></i></p></button></Link>
+                        <Link to='/register'><button className='btn btn-info'><p>Register <i className="fa-solid fa-arrow-right-from-bracket"></i></p></button></Link>
                     </div>
                 </div>
             </div>

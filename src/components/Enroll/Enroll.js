@@ -15,7 +15,7 @@ const Enroll = ({course}) => {
     return (
         <Pdf filename={`${id}.pdf`}>
             {({toPdf, targetRef: ref}) =>  (
-            <div className=" min-h-screen bg-base-200 p-6" ref={ref}>
+            <div className="bg-base-200 p-6" ref={ref}>
                 <div className='lg:grid lg:grid-cols-3 gap-3'>
                     {/* sideBar #1 */}
                 <div className="h-full px-6 space-y-2 w-full dark:bg-gray-900 dark:text-gray-100 mb-4">

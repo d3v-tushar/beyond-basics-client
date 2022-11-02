@@ -2,6 +2,7 @@ import React from 'react';
 import { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../context/UserContext';
+import './Header.css';
 
 const Header = () => {
     const {user, logOut} = useContext(AuthContext);
@@ -35,7 +36,7 @@ const Header = () => {
                     </li>
                     </ul>
                     </div>
-                    <Link to='/' className="btn btn-ghost normal-case font-bold text-2xl">Bayond Basics</Link>
+                    <div className='site-logo'><Link to='/' className="btn btn-ghost normal-case font-bold text-2xl"><img src="logo.png" alt="site logo" /></Link></div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">

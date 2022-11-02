@@ -8,6 +8,9 @@ const Login = () => {
     const navigate = useNavigate();
     const [passwordError, setPasswordError] = useState('');
     const [error, setError] = useState(false);
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+
     //Email Password Login
     const handleSubmit = (e) =>{
         e.preventDefault();
@@ -15,6 +18,7 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password);
+
         //Password Validation (Regular Expression)
         if(!/(?=.*[A-Z])/.test(password)){
             setPasswordError('Please provide atleast one uppercase.');
@@ -37,7 +41,10 @@ const Login = () => {
             console.log(user);
             navigate(from, { replace: true });
         })
-        .catch(error => console.error(error.message))
+        .catch(error => {
+            console.error(error.message);
+            setPasswordError(error.message)
+        })
     };
 
     //Google Sign in
@@ -60,21 +67,20 @@ const Login = () => {
             navigate(from, { replace: true });
         })
     }
-    const location = useLocation();
-    const from = location.state?.from?.pathname || '/';
+
     return (
-        <div className="hero min-h-screen bg-base-100">
+        <div className="hero min-h-screen bg-base-200">
+                        
+                <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100">
                         {
                             error && 
                             <div className="alert alert-error shadow-lg">
                             <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                <span>{passwordError}</span>
+                              <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                              <span>{passwordError}</span>
                             </div>
                             </div>
                         }
-                        
-                <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100">
                     <h1 className="text-2xl font-bold text-center">Login</h1>
                     <form onSubmit={handleSubmit} novalidate="" action="" className="space-y-6 ng-untouched ng-pristine ng-valid">
                         <div className="space-y-1 text-sm">

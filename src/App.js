@@ -35,7 +35,7 @@ function App() {
         {
           path: '/course/:courseId',
           loader: async({params}) => {
-            return fetch(`https://bb-api-server.vercel.app/courses/${params.courseId}`)
+            return fetch(`https://beyond-basics-server.vercel.app/courses/${params.courseId}`)
           },
           element: <CourseDetails></CourseDetails>
         },
@@ -63,7 +63,7 @@ function App() {
           path: '/checkout/:courseId',
           element: <PrivateRoute><Checkout></Checkout></PrivateRoute>,
           loader: async({params}) => {
-            return fetch(`https://bb-api-server.vercel.app/courses/${params.courseId}`)
+            return fetch(`https://beyond-basics-server.vercel.app/courses/${params.courseId}`)
           }
         }
       ]

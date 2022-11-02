@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div className='min-h-screen grid justify-items-center mt-5'>
+        <div className='min-h-screen grid justify-items-center mt-5 mx-2'>
             <div className="card md:w-10/12 bg-gray-900 text-gray-100 my-5">
             <div className="card-body items-center">
                 <h2 className="card-title text-2xl">1. What is CORS?</h2>
