@@ -49,13 +49,17 @@ const Register = () => {
         })
         .catch(error =>{
             console.error(error.message);
+            setPasswordError(error.message);
         })
     }
 
     const updateProfile = (name, photo) =>{
         updateUserProfileData(name, photo)
         .then(() => console.log("Registration Done!"))
-        .catch(error => console.error(error.message))
+        .catch(error =>{
+            console.error(error.message);
+            setPasswordError(error.message);
+        })
     }
 
     //Email Verification
