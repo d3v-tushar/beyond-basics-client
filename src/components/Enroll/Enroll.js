@@ -1,6 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/UserContext';
 import Pdf from "react-to-pdf";
 
@@ -12,14 +12,19 @@ const Enroll = ({course}) => {
     const {user} = useContext(AuthContext);
     const {id, title, discripOne, summary, discripTwo, fees, content} = course;
     const sortedContent = content.slice(0, 20);
+    const navigate = useNavigate();
+
+    const handleProfile = () =>{
+        navigate('/profile');
+    }
     return (
         <Pdf filename={`${id}.pdf`}>
             {({toPdf, targetRef: ref}) =>  (
             <div className="bg-base-200 p-6" ref={ref}>
                 <div className='lg:grid lg:grid-cols-3 gap-3'>
                     {/* sideBar #1 */}
-                <div className="h-full px-6 space-y-2 w-full dark:bg-gray-900 dark:text-gray-100 mb-4">
-                        <div className="flex items-center justify-center p-2 space-x-4  my-4 mx-auto border">
+                <div onClick={handleProfile} className="h-full px-6 space-y-2 w-full dark:bg-gray-900 dark:text-gray-100 mb-4">
+                        <div className="flex items-center justify-center p-2 space-x-4  my-4 mx-auto border rounded-md">
                         <img src={user?.photoURL ? user.photoURL : "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg"} alt="Pic" className="w-12 h-12 rounded-full dark:bg-gray-500" />
                         <div>
                             <h2 className="text-lg font-semibold">{user?.displayName ? user.displayName : "Your Name"}</h2>

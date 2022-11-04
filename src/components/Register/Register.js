@@ -3,13 +3,15 @@ import { useContext } from 'react';
 import { AuthContext } from '../../context/UserContext';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Register = () => {
     const {newUserRegister, emailVerification, updateUserProfileData} = useContext(AuthContext);
     const [error, setError] = useState(false);
     const [passwordError, setPasswordError] = useState('');
     const [success, setSuccess] = useState(false);
+    const [acceptTerms, setAcceptTerms] = useState(false);
+    const navigate = useNavigate();
 
     const handleRegister = (e) =>{
         e.preventDefault();
@@ -46,6 +48,7 @@ const Register = () => {
             form.reset();
             handleEmailVerification();
             setSuccess(true);
+            navigate('/profile')
         })
         .catch(error =>{
             console.error(error.message);
@@ -76,13 +79,16 @@ const Register = () => {
                 progress: undefined,
                 theme: "colored",
                 });
-        })
+        });
+    }
+    const handleTerms = (e) =>{
+        setAcceptTerms(e.target.checked);
     }
     return (
         <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col">
+                <div className="flex-col">
                     <div className="text-center lg:text-left">
-                    <h1 className="text-4xl font-bold">Please Register Now!</h1>
+                    <h1 className="text-4xl font-bold my-3">Please Register Now!</h1>
                     </div>
 
                         
@@ -137,8 +143,14 @@ const Register = () => {
                             <Link to='/login' className="label-text-alt link link-hover">Already have a account?</Link>
                         </label>
                         </div>
+                        
+                        <div class="flex items-center ">
+                            <input onClick={handleTerms} id="link-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+                            <label for="link-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">I Accept <a href="/home" alt='t&C' class="text-blue-600 dark:text-blue-500 hover:underline">Terms & Conditions</a>.</label>
+                        </div>
+
                         <div className="form-control mt-2">
-                        <button className="btn btn-primary">Register</button>
+                        <button className="btn btn-primary" disabled={!acceptTerms}>Register</button>
                         </div>
                     </form>
                     </div>

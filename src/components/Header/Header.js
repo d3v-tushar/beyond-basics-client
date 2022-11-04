@@ -36,7 +36,7 @@ const Header = () => {
                     </li>
                     </ul>
                     </div>
-                    <div className='site-logo'><Link to='/' className="btn btn-ghost normal-case font-bold text-2xl"><img src="logo.png" alt="site logo" /></Link></div>
+                    <div className='site-logo'><Link to='/' className="btn btn-ghost normal-case font-bold text-2xl"><img src="https://i.ibb.co/TMJGXH5/logo.png" alt="site logo" /></Link></div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">
