@@ -26,21 +26,25 @@ const UserContext = ({children}) => {
 
     //Login Registred User with Email & Password
     const signInExistingUser = (email, password) =>{
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     };
 
     //Send Verification Email
     const emailVerification = () =>{
+        setLoading(true);
         return sendEmailVerification(auth.currentUser);
     }
 
     //Google Sign In
     const signInWithGoogle = () =>{
+        setLoading(true);
         return signInWithPopup(auth, googleProvider);
     };
 
     //Github Sign In
     const signInWithGitHub = () =>{
+        setLoading(true);
         return signInWithPopup(auth, githubProvider);
     };
 
@@ -55,12 +59,14 @@ const UserContext = ({children}) => {
 
     //LogOut User
     const logOut = () =>{
+        setLoading(true);
         return signOut(auth);
     };
 
     //Update Password
     const currentUser = auth.currentUser;
     const updateNewPassword = (password) =>{
+        setLoading(true);
         return updatePassword(currentUser, password)
     };
 
