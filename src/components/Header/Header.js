@@ -16,10 +16,12 @@ const Header = ({darkMode, setDarkMode}) => {
 
     const handleDarkMode = (e) =>{
         if(e.target.checked){
-            setDarkMode(!darkMode)
+            localStorage.setItem('dark-mode', true);
+            setDarkMode(true);
         }
         else{
-            setDarkMode(false);
+            localStorage.setItem('dark-mode', false);
+            setDarkMode(false); 
         }
     };
     return (
